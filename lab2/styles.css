@@ -23,6 +23,10 @@ nav{
     padding: 10px;
     background-color: rgb(53, 53, 53);
 }
+nav a{
+    color : white;
+    text-decoration: none;
+}
 footer{
     color: whitesmoke;
     padding: 5px;
