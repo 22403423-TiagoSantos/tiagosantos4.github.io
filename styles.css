@@ -1,40 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
     background-color: #ffffff;
 }
-img {
-     width: 700px;
-     background-size: cover;
-     background-color: blue;
 
+header {
+  background: rgb(147, 175, 206);
+  height: 10vh;
+  top: 0;
+  text-align: center;
 }
+
 section:nth-child(1){
     height: 100vh;
-    background-color: rgb(95, 206, 95);
+    background-image: url("images/c3uhsgo1vx541.jpg");
+    background-repeat : no-repeat;
+    background-size: cover;
+    position: relative;
 }
-section:nth-child(2) {
-  height: 100vh;
-  background: orange;
+.texto {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    color: white;
+    font-size: 50px;
 }
-section:nth-child(3) {
-  height: 100vh;
-  background: yellow;
-}
-#inicio a{
-    position: sticky;
-}
-nav ul{
+#inicio nav ul{
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     gap: 1rem;
 }
-nav a{
+
+#inicio nav a{
     text-decoration: none;
-    color: inherit;
+    color: rgba(255, 255, 255, 0.884);
+    padding: 5px;
+    margin: 10px;
+    justify-content: flex-end;
+    display : flex;
 }
-header {
-  background: rgb(147, 175, 206);
-  height: 10vh;
-  top: 0;
+
+section:nth-child(2) {
+  height: 100vh;
+  background: rgb(153, 202, 185);
 }
+
+#projetos h1{
+  color: white;
+  padding: 10px;
+  font-size: 50px;
+}
+
+#projetos p{
+  padding: 10px;
+  font-size: 20px;
+}
+
+#projetos a{
+  margin: 40px auto;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 250px;
+  border: 2px solid rgb(67, 168, 89);
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(130, 218, 149);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+}
+
+#projetos nav a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.884);
+    padding: 5px;
+    margin: 10px;
+    display : flex;
+    text-align: center;
+}
+
+section:nth-child(3) {
+  height: 100vh;
+  background: rgb(235, 207, 229);
+}
+
+img {
+     width: 700px;
+     background-size: cover;
+}
+
+
+
+
