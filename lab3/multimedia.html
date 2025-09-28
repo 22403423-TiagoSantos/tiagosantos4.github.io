@@ -2,22 +2,57 @@
 <html lang="pt">
 
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caracas</title>
     <link rel="stylesheet" href="styles.css">
     <style display:flex>
         .fotografias {
+            margin: 10px;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            justify-content: center;
+            padding-top: 5%;
             gap: 20px;
         }
 
         .fotografias img {
             width: 300px;
             border-radius: 20px;
+            transition: width 1s;
         }
-        .poema p:nth-child(1){color:green}
+
+        .fotografias img:hover {
+            width: 400px;
+        }
+
+        .poema p:nth-child(1) {
+            color: green
+        }
+
+        #poema {
+            display: flex;
+            justify-content: center;
+            padding-top: 2%;
+        }
+
+        .poema {
+            margin-top: 5%;
+            margin-left: 45%;
+        }
+
+        #tituloVideo {
+            display: flex;
+            justify-content: center;
+            padding-top: 2%;
+        }
+
+        #video {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 5%;
+        }
     </style>
 </head>
 
@@ -35,12 +70,12 @@
     <main>
         <h2>Multimédia</h2>
         <p>Conteudos Multimédia</p>
-        <p>
+        <p id="linksMultimedia">
             <a href="#fotografias">Fotografias</a>
             <a href="#video">Vídeo</a>
             <a href="#poema">Poema</a>
         </p>
-        <section>
+        <section id="seccaoFotografias">
             <h3 id="fotografias">Fotografias</h3>
             <div class="fotografias">
                 <img src="images/primeira.jpg" alt="">
@@ -53,16 +88,17 @@
                 <img src="images/oitava.jpg" alt="">
             </div>
         </section>
-        <section>
-            <h3 id="video">Video</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/xEtc8o6RGjY?si=l7ykH17nLy_V3sGy"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-
+        <section id="seccaoVideo">
+            <h3 id="tituloVideo">Video</h3>
+            <div id="video">
+                <iframe width="700" height="500" src="https://www.youtube.com/embed/xEtc8o6RGjY?si=l7ykH17nLy_V3sGy"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </div>
             </iframe>
         </section>
-        <section>
+        <section id="seccaoPoema">
             <h3 id="poema">Poema</h3>
             <div class="poema">
                 <p>Entre montanhas ergues-te, altiva,</p>
@@ -84,6 +120,12 @@
                 <p>No teu peito pulsa o amor.</p>
                 <p>Mesmo em tempos de vento e de mágoa,</p>
                 <p>Brilhas, eterna, com alma e água.</p>
+            </div>
+        </section>
+        <section id="seccaoEmblematica">
+            <div class="container">
+                <img id="fotoEmblematica" src="images/soccer-488700_640.jpg" width="100%">
+                <div class="textoEmblematico"> Football is life</div>
             </div>
         </section>
     </main>

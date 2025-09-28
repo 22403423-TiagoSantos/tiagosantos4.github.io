@@ -1,4 +1,4 @@
-h1{
+h1 {
     height: 50px;
     color: whitesmoke;
     text-align: center;
@@ -6,33 +6,124 @@ h1{
     background-color: green;
     margin-bottom: 0px;
 }
-body{
+
+body {
     background-color: rgb(228, 226, 226);
 }
-main{
+
+main {
     padding: 25px;
     margin: 15px;
     background-color: white;
     border-radius: 10px;
 }
-nav{
+
+nav {
     word-spacing: 20px;
-    color: whitesmoke;
     text-align: center;
     margin-bottom: 15px;
     padding: 10px;
     background-color: rgb(53, 53, 53);
 }
-nav a{
-    color : white;
+
+nav a {
+    color: white;
     text-decoration: none;
 }
-footer{
+
+@media (max-width: 600px) {
+    h1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+footer {
     color: whitesmoke;
     padding: 5px;
     text-align: center;
     background-color: rgb(53, 53, 53);
 }
-img{
+
+img {
     margin-bottom: 20px;
+    max-width: 100%;
 }
+
+#linksMultimedia a {
+    text-decoration: none;
+    color: darkkhaki;
+}
+
+section {
+    height: 100vh;
+}
+
+#seccaoFotografias {
+    background-color: burlywood;
+    border-radius: 10px;
+}
+
+#seccaoVideo {
+    background-color: aquamarine;
+    border-radius: 10px;
+}
+
+#seccaoPoema {
+    background-color: chartreuse;
+    border-radius: 10px;
+}
+
+#fotoEmblematica, #seccaoEmblematica {
+    border-radius: 10px;
+}
+.container {
+  position:relative;
+}
+
+.textoEmblematico {
+  position:absolute;
+  color: rgb(255, 255, 255);
+  font-size: 3vw;
+  font-weight: bold;
+  top: 20%;
+  left: 38%;
+}
+
+#localizacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#conteudoLocalizacao {
+  display: flex;
+  flex-direction: row;
+}
+
+#textoLocalizacao{
+    max-width: 600px;
+}
+
+@media (max-width: 600px) {
+  #conteudoLocalizacao {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+#mapa iframe{
+    max-width: 100%;
+}
+
+
+
+
+
+
