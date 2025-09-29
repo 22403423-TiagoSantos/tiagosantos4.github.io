@@ -40,6 +40,8 @@ nav a {
     nav {
         display: flex;
         flex-direction: column;
+        gap: 10px;
+        padding: 20px;
     }
 }
 
@@ -79,51 +81,105 @@ section {
     border-radius: 10px;
 }
 
-#fotoEmblematica, #seccaoEmblematica {
+#fotoEmblematica,
+#seccaoEmblematica {
     border-radius: 10px;
 }
+
 .container {
-  position:relative;
+    position: relative;
 }
 
 .textoEmblematico {
-  position:absolute;
-  color: rgb(255, 255, 255);
-  font-size: 3vw;
-  font-weight: bold;
-  top: 20%;
-  left: 38%;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 3vw;
+    font-weight: bold;
+    top: 20%;
+    left: 38%;
 }
 
-#localizacao{
+#localizacao {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #conteudoLocalizacao {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
-#textoLocalizacao{
+#textoLocalizacao {
     max-width: 600px;
 }
 
 @media (max-width: 600px) {
-  #conteudoLocalizacao {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    #conteudoLocalizacao {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
-#mapa iframe{
+#mapa iframe {
     max-width: 100%;
 }
 
+header {
+    grid-area: header;
+}
 
+nav {
+    grid-area: menu;
+}
 
+main {
+    grid-area: main;
+}
 
+footer {
+    grid-area: footer;
+}
 
+.fotos {
+    grid-area: fotos;
+}
 
+.grid-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 'header header header'
+        'menu   main   fotos'
+        'footer footer footer';
+    min-height: 100vh;
+
+    nav {
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+    .fotos {
+        max-width: 100%;
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-areas:
+            "header"
+            "menu"
+            "main"
+            "fotos"
+            "footer";
+    }
+    .fotos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
