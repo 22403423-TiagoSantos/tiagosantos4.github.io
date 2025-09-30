@@ -16,8 +16,15 @@
             gap: 20px;
         }
 
+        #fotografias {
+            display: flex;
+            justify-content: center;
+            padding-top: 2%;
+        }
+
         .fotografias img {
             width: 300px;
+            max-width: 40%;
             border-radius: 20px;
             transition: width 1s;
         }
@@ -37,8 +44,11 @@
         }
 
         .poema {
-            margin-top: 5%;
-            margin-left: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
         }
 
         #tituloVideo {
@@ -52,6 +62,76 @@
             justify-content: center;
             align-items: center;
             padding-top: 5%;
+        }
+
+        #videoFrame {
+            padding: 5%;
+            width: 700px;
+            height: 500px;
+        }
+
+        #linksMultimedia a {
+            text-decoration: none;
+            color: darkkhaki;
+        }
+
+        #seccaoFotografias {
+            background-color: burlywood;
+            border-radius: 10px;
+        }
+
+
+        #seccaoVideo {
+            background-color: aquamarine;
+            border-radius: 10px;
+        }
+
+        #seccaoPoema {
+            background-color: chartreuse;
+            border-radius: 10px;
+        }
+
+        #seccaoEmblematica {
+            padding-top: 2%;
+        }
+
+        #fotoEmblematica {
+            max-height: 100vh;
+            border-radius: 10px;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .textoEmblematico {
+            position: absolute;
+            color: rgb(255, 255, 255);
+            font-size: 3vw;
+            font-weight: bold;
+            top: 10%;
+            left: 38%;
+        }
+
+        @media (max-width: 600px) {
+
+            .fotografias img {
+                max-width: 40%;
+            }
+
+            #videoFrame {
+                width: 100%;
+            }
+        }
+
+        #videoExtra {
+            height: 70vw;
+            padding-top: 2%;
+        }
+
+        #myVideo {
+            width: 100%;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -91,7 +171,7 @@
         <section id="seccaoVideo">
             <h3 id="tituloVideo">Video</h3>
             <div id="video">
-                <iframe width="700" height="500" src="https://www.youtube.com/embed/xEtc8o6RGjY?si=l7ykH17nLy_V3sGy"
+                <iframe id="videoFrame" src="https://www.youtube.com/embed/xEtc8o6RGjY?si=l7ykH17nLy_V3sGy"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
@@ -125,8 +205,15 @@
         <section id="seccaoEmblematica">
             <div class="container">
                 <img id="fotoEmblematica" src="images/soccer-488700_640.jpg" width="100%">
-                <div class="textoEmblematico"> Football is life</div>
+                <div class="textoEmblematico">
+                    <h3>Football is life</h3>
+                </div>
             </div>
+        </section>
+        <section id="videoExtra">
+            <video autoplay muted loop id="myVideo">
+                <source src="images/212404_small.mp4" type="video/mp4">
+            </video>
         </section>
     </main>
     <footer>

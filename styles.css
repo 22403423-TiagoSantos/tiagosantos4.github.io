@@ -124,6 +124,15 @@ header {
 }
 
 @media (max-width: 600px) {
+
+
+#projetos ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
   #cadeira {
     display: flex;
     flex-direction: column;

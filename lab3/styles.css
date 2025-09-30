@@ -43,6 +43,10 @@ nav a {
         gap: 10px;
         padding: 20px;
     }
+    .imagemPrincipal{
+        display: flex;
+        justify-content: center;
+    }
 }
 
 footer {
@@ -57,47 +61,10 @@ img {
     max-width: 100%;
 }
 
-#linksMultimedia a {
-    text-decoration: none;
-    color: darkkhaki;
-}
-
 section {
     height: 100vh;
 }
 
-#seccaoFotografias {
-    background-color: burlywood;
-    border-radius: 10px;
-}
-
-#seccaoVideo {
-    background-color: aquamarine;
-    border-radius: 10px;
-}
-
-#seccaoPoema {
-    background-color: chartreuse;
-    border-radius: 10px;
-}
-
-#fotoEmblematica,
-#seccaoEmblematica {
-    border-radius: 10px;
-}
-
-.container {
-    position: relative;
-}
-
-.textoEmblematico {
-    position: absolute;
-    color: rgb(255, 255, 255);
-    font-size: 3vw;
-    font-weight: bold;
-    top: 20%;
-    left: 38%;
-}
 
 #localizacao {
     display: flex;
@@ -163,6 +130,9 @@ footer {
 }
 
     .fotos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         max-width: 100%;
         padding-top: 50px;
     }
