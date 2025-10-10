@@ -50,8 +50,8 @@
             <script>
                 const frase = document.querySelector("#idPassa p")
 
-                function mudarFrase() {
-                    frase.textContent = "Obrigado por passares!"
+                const mudarFrase = () => {
+                    frase.textContent = "Obrigado por passares!";
                 }
 
                 function reporFrase() {
@@ -66,29 +66,23 @@
         </section>
 
         <section id="idPinta">
-
             <p>2. Pinta-me!</p>
-            <button onclick="vermelho()">Red</button>
-            <button onclick="verde()">Green</button>
-            <button onclick="azul()">Blue</button>
+            <button class="color" data-color="purple">Roxo</button>
+            <button class="color" data-color="orange">Laranja</button>
+            <button class="color" data-color="pink">Rosa</button>
 
             <script>
-                const fraseCor = document.querySelector("#idPinta p")
+                const fraseCor = document.querySelector("#idPinta p");
 
-                function vermelho() {
-                    fraseCor.style.color = 'red';
-                }
-                function verde() {
-                    fraseCor.style.color = 'green';
-                }
-                function azul() {
-                    fraseCor.style.color = 'blue';
-                }
-
+                document.querySelectorAll("button.color").forEach((button) => {
+                    button.addEventListener("click", () => {
+                        fraseCor.style.color = button.dataset.color;
+                    });
+                });
             </script>
-
-
         </section>
+
+
         <section id="escrever">
 
             <label for="input">3. Experimenta escrever...</label>
@@ -124,51 +118,86 @@
 
         <section id="background">
 
-
-            <label for="background">4. Escolha uma cor em inglês:</label>
-            <input id="background" type="text">
-            <button>submeter</button>
+            <label>4. Escolha uma cor em inglês:</label>
+            <select>
+                <option value="green">Green</option>
+                <option value="pink">Pink</option>
+                <option value="Orange">Orange</option>
+                <option value="yellow">Yellow</option>
+            </select>
 
             <script>
-
-                //A: variáveis
-
-                const texto = document.querySelector("#background input")
-                const botao = document.querySelector("#background button")
-
-                //B: Event listeners
-
-                function mudaBackground() {
-                    document.querySelector("body").style.background = texto.value
+                document.querySelector('select').onchange = function () {
+                    document.querySelector('body').style.backgroundColor = this.value;
                 }
-
-                botao.onclick = mudaBackground;
-
             </script>
-
-
 
         </section>
 
-        <section id="contagem">
 
+        <section id="contagem">
             <p>5. </p>
-            <button onclick="contador()">Conta!</button>
+            <button id="botaoConta">Conta!</button>
             <p id="numero">0</p>
 
             <script>
-                let counter = 0;
                 const numero = document.querySelector("#numero");
+                const botao = document.querySelector("#botaoConta");
+
+                if (!localStorage.getItem('contador')) {
+                    localStorage.setItem('contador', 0);
+                }
+
+                numero.textContent = localStorage.getItem('contador');
 
                 function contador() {
+                    let counter = localStorage.getItem('contador');
                     counter++;
                     numero.textContent = counter;
+                    localStorage.setItem('contador', counter);
                 }
+
+                botao.onclick = contador;
             </script>
-
-
         </section>
 
+
+        <section id="formulario">
+            <form id="dadosFormulario">
+                <label for="nome">6. </label>
+                <input id="nome" type="text" placeholder="Insira o seu nome">
+                <input id="idade" type="number" placeholder="Insira a sua idade">
+                <input type="submit">
+            </form>
+            <p id="mensagem"></p>
+
+            <script>
+                document.querySelector('#dadosFormulario').onsubmit = (e) => {
+                    e.preventDefault();
+
+                    const nome = document.querySelector('#nome').value;
+                    const idade = document.querySelector('#idade').value;
+
+                    document.querySelector('#mensagem').textContent = `Olá, o ${nome} tem ${idade}!`;
+                };
+            </script>
+        </section>
+
+        <section id="contadorAutomatico">
+            <p id="numeroIncrementado">7. Automatic counter: 0</p>
+
+            <script>
+                const numeroAuto = document.querySelector("#numeroIncrementado");
+                let counter = 0;
+
+                function count() {
+                    counter++;
+                    numeroAuto.textContent = `7. Automatic counter: ${counter}`;
+                }
+
+                setInterval(count, 1000);
+            </script>
+        </section>
 
     </main>
 
