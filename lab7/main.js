@@ -160,10 +160,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const botaoComprar = document.querySelector('#botaoComprar');
+
 const verificaEstudante = document.querySelector('#verificaEstudante');
+
 const inputCupao = document.querySelector('#inputCupao');
+
 const respostaCompra = document.querySelector('#respostaCompra');
+
 const custoTotal = document.querySelector('#custoTotal');
+
 const referencia = document.querySelector('#referencia');
 
 botaoComprar.addEventListener('click', () => {
