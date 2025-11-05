@@ -183,7 +183,7 @@ botaoComprar.addEventListener('click', () => {
         coupon: cupao
     };
 
-    fetch('https://deisishop.pythonanywhere.com/buy/',{
+    fetch('https://deisishop.pythonanywhere.com/buy/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
